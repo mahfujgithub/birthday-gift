@@ -12,11 +12,8 @@ export const GalleryItemSchema = new Schema<IGalleryItem, GalleryItemModel>(
       required: true,
     },
     img: {
-      type: {
-        url: {type: [String], required: true},
-        height: {type: String, required: true},
-        width: {type: String, required: true},
-      }
+      type: String,
+      required: true,
     },
   },
   {

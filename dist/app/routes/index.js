@@ -21,6 +21,10 @@ const moduleRoutes = [
         path: '/storey',
         route: storey_route_1.StoreyRoutes,
     },
+    {
+        path: '/video',
+        route: storey_route_1.StoreyRoutes,
+    },
 ];
 moduleRoutes.forEach(route => router.use(route.path, route.route));
 exports.default = router;

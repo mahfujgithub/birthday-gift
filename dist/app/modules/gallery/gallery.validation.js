@@ -13,16 +13,8 @@ const createGalleryItemZodSchema = zod_1.default.object({
         des: zod_1.default.string({
             required_error: 'field is required!',
         }),
-        img: zod_1.default.object({
-            url: zod_1.default.string({
-                required_error: 'field is required!',
-            }),
-            height: zod_1.default.string({
-                required_error: 'field is required!',
-            }),
-            width: zod_1.default.string({
-                required_error: 'field is required!',
-            }),
+        img: zod_1.default.string({
+            required_error: 'field is required!',
         }),
     }),
 });
@@ -30,11 +22,7 @@ const updateGalleryItemZodSchema = zod_1.default.object({
     body: zod_1.default.object({
         title: zod_1.default.string().optional(),
         des: zod_1.default.string().optional(),
-        img: zod_1.default.object({
-            url: zod_1.default.string().optional(),
-            height: zod_1.default.string().optional(),
-            width: zod_1.default.string().optional(),
-        }),
+        img: zod_1.default.string().optional(),
     }),
 });
 exports.GalleryItemValidation = {

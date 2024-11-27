@@ -11,7 +11,6 @@ const createGalleryItem = async (item) => {
     const httpStatus = await import('http-status-ts');
     const existingItem = await gallery_model_1.GalleryItem.findOne({
         title: item.title,
-        des: item.des,
         img: item.img,
     });
     // If a duplicate is found, throw an error or handle it as needed

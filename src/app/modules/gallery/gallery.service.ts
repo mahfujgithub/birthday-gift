@@ -8,7 +8,6 @@ const createGalleryItem = async (item: IGalleryItem) => {
 
   const existingItem = await GalleryItem.findOne({
     title: item.title,
-    des: item.des,
     img: item.img,
   });
 

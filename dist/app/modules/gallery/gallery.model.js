@@ -7,10 +7,6 @@ exports.GalleryItemSchema = new mongoose_1.Schema({
         type: String,
         required: true,
     },
-    des: {
-        type: String,
-        required: true,
-    },
     img: {
         type: String,
         required: true,

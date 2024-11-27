@@ -49,6 +49,5 @@ const removeVideoItem = async (id) => {
 exports.VideoItemService = {
     createVideoItem,
     getVideoItems,
-    //   updateVideoItem,
     removeVideoItem,
 };

@@ -1,8 +1,7 @@
 import { Model } from 'mongoose';
 
 export type IGalleryItem = {
-  title: string;
-  des: string;
+  title?: string;
   img: string;
 };
 

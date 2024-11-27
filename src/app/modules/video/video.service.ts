@@ -59,6 +59,5 @@ const removeVideoItem = async (id: string) => {
 export const VideoItemService = {
   createVideoItem,
   getVideoItems,
-//   updateVideoItem,
   removeVideoItem,
 };

@@ -7,10 +7,6 @@ export const GalleryItemSchema = new Schema<IGalleryItem, GalleryItemModel>(
       type: String,
       required: true,
     },
-    des: {
-      type: String,
-      required: true,
-    },
     img: {
       type: String,
       required: true,

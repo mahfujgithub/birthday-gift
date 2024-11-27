@@ -12,14 +12,7 @@ router.post(
 
 router.get('/', VideoItemController.getVideoItems);
 
-// update slider
-// router.patch(
-//   '/:id',
-//   validateRequest(VideoItemValidation.updateVideoItemZodSchema),
-//   VideoItemController.updateVideoItem,
-// );
-
 // delete slider
 router.delete('/:id', VideoItemController.removeVideoItem);
 
-export const StoreyRoutes = router;
+export const VideoRoutes = router;

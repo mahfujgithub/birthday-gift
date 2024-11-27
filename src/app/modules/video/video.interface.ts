@@ -1,8 +1,7 @@
 import { Model } from 'mongoose';
 
-export type IStoreyItem = {
-  title: string;
-  des: string;
+export type IVideoItem = {
+  url: string;
 };
 
-export type StoreyItemModel = Model<IStoreyItem, Record<string, unknown>>;
+export type VideoItemModel = Model<IVideoItem, Record<string, unknown>>;

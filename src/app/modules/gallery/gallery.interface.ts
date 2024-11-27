@@ -1,7 +1,7 @@
 import { Model } from 'mongoose';
 
 export type Image = {
-  url: string;
+  url: string[];
   height: string;
   width: string;
 };

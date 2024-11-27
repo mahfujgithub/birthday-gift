@@ -13,7 +13,7 @@ exports.GalleryItemSchema = new mongoose_1.Schema({
     },
     img: {
         type: {
-            url: { type: String, required: true },
+            url: { type: [String], required: true },
             height: { type: String, required: true },
             width: { type: String, required: true },
         }

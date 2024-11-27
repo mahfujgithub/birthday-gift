@@ -1,6 +1,6 @@
 import express from 'express';
 import { SliderRoutes } from '../modules/slider/slider.route';
-import { GalleryItemRoutes } from '../modules/galleryItem/gallery.route';
+import { GalleryItemRoutes } from '../modules/gallery/gallery.route';
 
 const router = express.Router();
 

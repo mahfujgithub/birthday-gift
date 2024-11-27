@@ -23,7 +23,7 @@ const createStoreyItem = async (item) => {
 };
 // get all menu
 const getStoreyItems = async (item) => {
-    const result = await storey_model_1.StoreyItem.find(item);
+    const result = await storey_model_1.StoreyItem.find(item).sort({ createdAt: -1 });
     return result;
 };
 const updateStoreyItem = async (_id, payload) => {

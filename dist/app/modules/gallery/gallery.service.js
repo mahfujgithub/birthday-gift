@@ -24,7 +24,7 @@ const createGalleryItem = async (item) => {
 };
 // get all menu
 const getGalleryItems = async (items) => {
-    const result = await gallery_model_1.GalleryItem.find(items);
+    const result = await gallery_model_1.GalleryItem.find(items).sort({ createdAt: -1 });
     return result;
 };
 const updateGalleryItem = async (_id, payload) => {

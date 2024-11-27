@@ -26,7 +26,7 @@ const createStoreyItem = async (item: IStoreyItem) => {
 
 // get all menu
 const getStoreyItems = async (item: IStoreyItem) => {
-  const result = await StoreyItem.find(item);
+  const result = await StoreyItem.find(item).sort({ createdAt: -1 });
   return result;
 };
 

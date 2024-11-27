@@ -27,7 +27,7 @@ const createGalleryItem = async (item: IGalleryItem) => {
 
 // get all menu
 const getGalleryItems = async (items: IGalleryItem) => {
-  const result = await GalleryItem.find(items);
+  const result = await GalleryItem.find(items).sort({ createdAt: -1 });
   return result;
 };
 

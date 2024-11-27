@@ -24,7 +24,7 @@ const createSliderItem = async (item) => {
 };
 // get all menu
 const getSliderItems = async (item) => {
-    const result = await slider_model_1.SliderItem.find(item);
+    const result = await slider_model_1.SliderItem.find(item).sort({ createdAt: -1 });
     return result;
 };
 const updateSliderItem = async (_id, payload) => {

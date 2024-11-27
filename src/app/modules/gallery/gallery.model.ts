@@ -28,7 +28,7 @@ export const GalleryItemSchema = new Schema<IGalleryItem, GalleryItemModel>(
 );
 
 export const GalleryItem = model<IGalleryItem, GalleryItemModel>(
-  'GalleryItem',
+  'Gallery',
   GalleryItemSchema,
 );
 

@@ -22,4 +22,4 @@ router.patch(
 // delete slider
 router.delete('/:id', SliderController.removeGalleryItem);
 
-export const GalleryItemRoutes = router;
+export const GalleryRoutes = router;

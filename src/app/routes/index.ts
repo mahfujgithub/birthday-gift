@@ -1,6 +1,7 @@
 import express from 'express';
 import { SliderRoutes } from '../modules/slider/slider.route';
-import { GalleryItemRoutes } from '../modules/gallery/gallery.route';
+import { GalleryRoutes } from '../modules/gallery/gallery.route';
+import { StoreyRoutes } from '../modules/story/storey.route';
 
 const router = express.Router();
 
@@ -10,8 +11,12 @@ const moduleRoutes = [
     route: SliderRoutes,
   },
   {
-    path: '/gallery-item',
-    route: GalleryItemRoutes,
+    path: '/gallery',
+    route: GalleryRoutes,
+  },
+  {
+    path: '/storey',
+    route: StoreyRoutes,
   },
 ];
 

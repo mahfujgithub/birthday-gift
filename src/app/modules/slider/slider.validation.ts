@@ -1,6 +1,6 @@
 import z from 'zod';
 
-const createSliderZodSchema = z.object({
+const createSliderItemZodSchema = z.object({
   body: z.object({
     title: z.string({
       required_error: 'field is required!',
@@ -14,6 +14,15 @@ const createSliderZodSchema = z.object({
   }),
 });
 
+const updateSliderItemZodSchema = z.object({
+  body: z.object({
+    title: z.string().optional(),
+    des: z.string().optional(),
+    img: z.string().optional(),
+  }),
+});
+
 export const SliderItemValidation = {
-  createSliderZodSchema,
+  createSliderItemZodSchema,
+  updateSliderItemZodSchema,
 };

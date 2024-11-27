@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post(
   '/create',
-  validateRequest(SliderItemValidation.createSliderZodSchema),
+  validateRequest(SliderItemValidation.createSliderItemZodSchema),
   SliderItemController.createSliderItem,
 );
 
@@ -15,7 +15,7 @@ router.get('/', SliderItemController.getSliderItems);
 // update slider
 router.patch(
   '/:id',
-  validateRequest(SliderItemValidation.createSliderZodSchema),
+  validateRequest(SliderItemValidation.updateSliderItemZodSchema),
   SliderItemController.updateSliderItem,
 );
 

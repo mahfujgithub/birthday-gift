@@ -5,7 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const slider_route_1 = require("../modules/slider/slider.route");
-const gallery_route_1 = require("../modules/galleryItem/gallery.route");
+const gallery_route_1 = require("../modules/gallery/gallery.route");
+const storey_route_1 = require("../modules/story/storey.route");
 const router = express_1.default.Router();
 const moduleRoutes = [
     {
@@ -13,8 +14,12 @@ const moduleRoutes = [
         route: slider_route_1.SliderRoutes,
     },
     {
-        path: '/gallery-item',
-        route: gallery_route_1.GalleryItemRoutes,
+        path: '/gallery',
+        route: gallery_route_1.GalleryRoutes,
+    },
+    {
+        path: '/storey',
+        route: storey_route_1.StoreyRoutes,
     },
 ];
 moduleRoutes.forEach(route => router.use(route.path, route.route));

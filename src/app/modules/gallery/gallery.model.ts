@@ -11,6 +11,10 @@ export const GalleryItemSchema = new Schema<IGalleryItem, GalleryItemModel>(
       type: String,
       required: true,
     },
+    url: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

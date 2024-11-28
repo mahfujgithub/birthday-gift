@@ -8,6 +8,7 @@ const slider_route_1 = require("../modules/slider/slider.route");
 const gallery_route_1 = require("../modules/gallery/gallery.route");
 const storey_route_1 = require("../modules/story/storey.route");
 const video_route_1 = require("../modules/video/video.route");
+const font_route_1 = require("../modules/font/font.route");
 const router = express_1.default.Router();
 const moduleRoutes = [
     {
@@ -25,6 +26,10 @@ const moduleRoutes = [
     {
         path: '/video',
         route: video_route_1.VideoRoutes,
+    },
+    {
+        path: '/font',
+        route: font_route_1.FontRoutes,
     },
 ];
 moduleRoutes.forEach(route => router.use(route.path, route.route));

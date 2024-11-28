@@ -12,6 +12,7 @@ const createGalleryItem = async (item) => {
     const existingItem = await gallery_model_1.GalleryItem.findOne({
         title: item.title,
         img: item.img,
+        url: item.url
     });
     // If a duplicate is found, throw an error or handle it as needed
     if (existingItem) {

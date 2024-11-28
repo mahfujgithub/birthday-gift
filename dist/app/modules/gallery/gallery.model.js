@@ -11,6 +11,10 @@ exports.GalleryItemSchema = new mongoose_1.Schema({
         type: String,
         required: true,
     },
+    url: {
+        type: String,
+        required: true,
+    },
 }, {
     timestamps: true,
     toJSON: {

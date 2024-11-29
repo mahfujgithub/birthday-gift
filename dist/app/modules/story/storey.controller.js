@@ -31,6 +31,17 @@ const getStoreyItems = (0, catchAsync_1.default)(async (req, res) => {
         data: result,
     });
 });
+const getSingleStoreyItem = (0, catchAsync_1.default)(async (req, res) => {
+    const httpStatus = await import('http-status-ts');
+    const { id } = req.params;
+    const result = await storey_service_1.StoreyItemService.getSingleStoreyItem(id);
+    (0, sendResponse_1.default)(res, {
+        statusCode: httpStatus.HttpStatus.OK,
+        success: true,
+        message: 'Storey Item Retrieved successfully!',
+        data: result,
+    });
+});
 // update single slider
 const updateStoreyItem = (0, catchAsync_1.default)(async (req, res) => {
     const httpStatus = await import('http-status-ts');
@@ -59,6 +70,7 @@ const removeStoreyItem = (0, catchAsync_1.default)(async (req, res) => {
 exports.SliderItemController = {
     createStoreyItem,
     getStoreyItems,
+    getSingleStoreyItem,
     updateStoreyItem,
     removeStoreyItem,
 };

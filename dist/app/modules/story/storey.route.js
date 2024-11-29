@@ -11,6 +11,7 @@ const storey_controller_1 = require("./storey.controller");
 const router = express_1.default.Router();
 router.post('/create', (0, validateRequest_1.default)(storey_validation_1.StoreyItemValidation.createStoreyItemZodSchema), storey_controller_1.SliderItemController.createStoreyItem);
 router.get('/', storey_controller_1.SliderItemController.getStoreyItems);
+router.get('/:id', storey_controller_1.SliderItemController.getSingleStoreyItem);
 // update slider
 router.patch('/:id', (0, validateRequest_1.default)(storey_validation_1.StoreyItemValidation.updateStoreyItemZodSchema), storey_controller_1.SliderItemController.updateStoreyItem);
 // delete slider

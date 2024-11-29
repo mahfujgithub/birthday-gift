@@ -26,6 +26,10 @@ const getStoreyItems = async (item) => {
     const result = await storey_model_1.StoreyItem.find(item).sort({ createdAt: -1 });
     return result;
 };
+const getSingleStoreyItem = async (id) => {
+    const result = await storey_model_1.StoreyItem.findById(id);
+    return result;
+};
 const updateStoreyItem = async (_id, payload) => {
     const httpStatus = await import('http-status-ts');
     const isExist = await storey_model_1.StoreyItem.findById(_id);
@@ -47,6 +51,7 @@ const removeStoreyItem = async (id) => {
 exports.StoreyItemService = {
     createStoreyItem,
     getStoreyItems,
+    getSingleStoreyItem,
     updateStoreyItem,
     removeStoreyItem,
 };

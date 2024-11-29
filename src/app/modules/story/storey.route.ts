@@ -12,6 +12,8 @@ router.post(
 
 router.get('/', SliderItemController.getStoreyItems);
 
+router.get('/:id', SliderItemController.getSingleStoreyItem);
+
 // update slider
 router.patch(
   '/:id',

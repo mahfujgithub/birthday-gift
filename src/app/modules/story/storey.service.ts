@@ -30,6 +30,12 @@ const getStoreyItems = async (item: IStoreyItem) => {
   return result;
 };
 
+const getSingleStoreyItem = async (id: string): Promise<IStoreyItem | null> => {
+  const result = await StoreyItem.findById(id);
+
+  return result;
+};
+
 const updateStoreyItem = async (
   _id: string,
   payload: Partial<IStoreyItem>,
@@ -60,6 +66,7 @@ const removeStoreyItem = async (id: string) => {
 export const StoreyItemService = {
   createStoreyItem,
   getStoreyItems,
+  getSingleStoreyItem,
   updateStoreyItem,
   removeStoreyItem,
 };
